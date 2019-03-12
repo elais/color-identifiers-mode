@@ -571,7 +571,11 @@ For Emacs Lisp support within color-identifiers-mode."
    `(ess-mode "[^$][[:space:]]*" "\\_<\\(\\(?:\\s_\\|\\sw\\)+\\)"
                    (nil)))
 
-
+;;; Elixir
+(add-to-list
+ 'color-identifiers:modes-alist
+ `(elixir-mode . ("[^.][[:space:]]*"
+                  "\\_<\\([a-zA-Z_$]\\(?:\\s_\\|\\sw\\)*\\)" (nil))))
 ;;; PACKAGE INTERNALS ==========================================================
 
 (defvar color-identifiers:colors nil
